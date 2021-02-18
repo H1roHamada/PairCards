@@ -26,8 +26,6 @@ function renderRandomCards(arrayOfCards) {
         if (arr.length == max_number) {
             let dblArr = arr.concat(arr);
             let AddForRender = shuffle(dblArr)
-            console.log(dblArr)
-            console.log(AddForRender)
             for (let i = 0; i < dblArr.length; i++) {
                 GAME.insertAdjacentHTML('beforeend',
                     `<div class="card" data-name=${arrayOfCards[AddForRender[i]].name}>
@@ -37,9 +35,6 @@ function renderRandomCards(arrayOfCards) {
                             `
                 )
             }
-
-            console.log(arrayOfCards)
-
             CARD = document.querySelectorAll('.card')
             BACK = document.querySelectorAll('.back')
             FRONT = document.querySelectorAll('.front')
